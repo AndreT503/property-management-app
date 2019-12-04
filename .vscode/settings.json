@@ -1,17 +1,46 @@
 {
+  "editor.tabSize": 2,
+  "editor.rulers": [90],
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "editor.cursorBlinking": "solid",
+  "workbench.iconTheme": "material-icon-theme",
+  "git.enableSmartCommit": true,
+  "editor.autoIndent": true,
+  "debug.openExplorerOnEnd": true,
+
+  "explorer.openEditors.visible": 0,
+  "editor.minimap.enabled": false,
+  "html.autoClosingTags": false,
+  "git.confirmSync": false,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+
+  "prettier.disableLanguages": ["html"],
   "workbench.colorCustomizations": {
-    "activityBar.background": "#eb85f6",
+    "liveServer.settings.port": 5002,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
+    "liveServer.settings.NoBrowser": false,
+    "liveServer.settings.ignoreFiles": [
+      ".vscode/**",
+      "**/*.scss",
+      "**/*.sass"
+    ],
+    "activityBar.background": "#f0e0a7",
+    "activityBar.activeBorder": "#1ca386",
     "activityBar.foreground": "#15202b",
     "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#fbf5c4",
-    "activityBarBadge.foreground": "#15202b",
-    "titleBar.activeBackground": "#e355f3",
-    "titleBar.inactiveBackground": "#e355f399",
+    "activityBarBadge.background": "#1ca386",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#e8d07c",
+    "titleBar.inactiveBackground": "#e8d07c99",
     "titleBar.activeForeground": "#15202b",
     "titleBar.inactiveForeground": "#15202b99",
-    "statusBar.background": "#e355f3",
-    "statusBarItem.hoverBackground": "#db25f0",
+    "statusBar.background": "#e8d07c",
+    "statusBarItem.hoverBackground": "#e0c051",
     "statusBar.foreground": "#15202b"
   },
-  "peacock.color": "#e355f3"
+  "peacock.color": "#e8d07c"
 }

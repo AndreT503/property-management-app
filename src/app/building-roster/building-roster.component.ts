@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-building-roster',
   templateUrl: './building-roster.component.html',
-  styleUrls: ['./building-roster.component.css']
+  styleUrls: ['./building-roster.component.css'],
 })
 export class BuildingRosterComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -41,7 +41,7 @@
     "@angular/cdk": "~8.2.3",
     "@angular/common": "~8.2.4",
     "@angular/compiler": "~8.2.4",
-    "@angular/core": "~8.2.4",
+    "@angular/core": "^8.2.14",
     "@angular/flex-layout": "^8.0.0-beta.27",
     "@angular/forms": "~8.2.4",
     "@angular/material": "^8.2.3",
@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.2",
-    "@angular/cli": "~8.3.2",
+    "@angular/cli": "^8.3.20",
     "@angular/compiler-cli": "~8.2.4",
     "@angular/language-service": "~8.2.4",
     "@types/jasmine": "~3.3.8",

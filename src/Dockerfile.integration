@@ -15,3 +15,15 @@ RUN git clone $GIT_REPO .
 
 RUN npm install
 RUN npm run  $BUILD_SCRIPT
+
+FROM slappers/alpine-node-chromium as tester
+ENV BUILDER_SRC-DIR /usr/src
+ENV SRC_DIR /usr/src
+ENV TEST_SCRIPT test:prod
+
+RUN mkdir -p $SRC_DIR
+WORKDIR $SRC_DIR
+
+COPY --from=builder $BUILDER_SRC_DIR $SRC_DIR
+
+CMD 'npm run $TEST_SCRIPT

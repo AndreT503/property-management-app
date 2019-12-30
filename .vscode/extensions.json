@@ -8,6 +8,9 @@
     "amatiasq.sort-imports",
     "DSKWRK.vscode-generate-getter-setter",
     "esbenp.prettier-vscode",
-    "HookyQR.beautify"
+    "HookyQR.beautify",
+    "johnpapa.vscode-peacock",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode.vscode-typescript-tslint-plugin"
   ]
 }

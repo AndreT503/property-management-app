@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core'
-import { MatIconRegistry, MatSidenav } from '@angular/material'
+import { Component, ViewChild } from '@angular/core'
+import { MatIconRegistry } from '@angular/material'
 
 import { DomSanitizer } from '@angular/platform-browser'
 

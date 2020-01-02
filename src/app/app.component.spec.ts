@@ -1,3 +1,9 @@
+import { TestBed, async } from '@angular/core/testing'
+import { MediaObserver } from '@angular/flex-layout'
+import { MatIconRegistry } from '@angular/material'
+import { DomSanitizer } from '@angular/platform-browser'
+
+import { AppComponent } from './app.component'
 import {
   DomSanitizerFake,
   MatIconRegistryFake,
@@ -5,12 +11,6 @@ import {
   commonTestingModules,
   commonTestingProviders,
 } from './common/common.testing'
-import { TestBed, async } from '@angular/core/testing'
-
-import { AppComponent } from './app.component'
-import { DomSanitizer } from '@angular/platform-browser'
-import { MatIconRegistry } from '@angular/material'
-import { MediaObserver } from '@angular/flex-layout'
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -25,24 +25,10 @@ describe('AppComponent', () => {
     }).compileComponents()
   }))
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent)
-    const app = fixture.debugElement.componentInstance
-    expect(app).toBeTruthy()
-  })
-
-  it(`should have as title 'property-management-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent)
-    const app = fixture.debugElement.componentInstance
-    expect(app.title).toEqual('property-management-app')
-  })
-
-  it('should render title', () => {
+  it('should render app-container', async(() => {
     const fixture = TestBed.createComponent(AppComponent)
     fixture.detectChanges()
     const compiled = fixture.debugElement.nativeElement
-    expect(compiled.querySelector('.content span').textContent).toContain(
-      'property-management-app app is running!'
-    )
-  })
+    expect(compiled.querySelector('.app-container')).toBeDefined()
+  }))
 })

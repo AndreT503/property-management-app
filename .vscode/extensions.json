@@ -1,13 +1,14 @@
 {
   "recommendations": [
     "johnpapa.angular-essentials",
-    "PKief.material-icon-theme",
+    "pkief.material-icon-theme",
     "formulahendry.auto-close-tag",
     "eamodio.gitlens",
-    "WallabyJs.quokka-vscode",
+    "wallabyjs.quokka-vscode",
     "amatiasq.sort-imports",
-    "DSKWRK.vscode-generate-getter-setter",
+    "dskwrk.vscode-generate-getter-setter",
     "esbenp.prettier-vscode",
-    "HookyQR.beautify"
+    "hookyqr.beautify",
+    "nrwl.angular-console"
   ]
 }

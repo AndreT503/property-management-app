@@ -10,7 +10,7 @@
     "build:prod": "ng build --prod",
     "test": "ng test",
     "test:prod": "npm test -- --watch=false",
-    "lint": "ng lint",
+    "lint": "run-p lint:ts lint:tsc",
     "e2e": "ng e2e",
     "predocker:build": "npm run build -- --prod --output-path dist && npm test -- --watch=false && npm run e2e",
     "docker:build": "cross-conf-env docker image build . -t $npm_package_config_imageRepo:$npm_package_version",
@@ -28,7 +28,14 @@
     "docker:open:mac": "echo Trying to launch on MacOS && sleep 2 && URL=http://localhost:$npm_package_config_imagePort && open $URL",
     "docker:debugmessage": "echo Docker Debug Completed Successfully! Hit Ctrl+C to terminate log tailing.",
     "predocker:debug": "run-s docker:build docker:run",
-    "docker:debug": "run-s -cs docker:open:win docker:open:mac docker:debugmessage docker:taillogs"
+    "docker:debug": "run-s -cs docker:open:win docker:open:mac docker:debugmessage docker:taillogs",
+    "style": "import-sort -l \"**/{src,tests,e2e}/**/*.ts\" && prettier --check \"**/{src,tests,e2e}/**/*.{*css,ts}\"",
+    "style:fix": "import-sort --write \"**/{src,tests,e2e}/**/*.ts\" && prettier --write \"**/{src,tests,e2e}/**/*.{*css,ts}\" && js-beautify \"**/src/**/*.html\"",
+    "lint:fix": "run-s lint:ts:fix lint:tsc",
+    "lint:ts": "tslint --config tslint.json --project . -e \"**/{test,polyfills}.ts\"",
+    "lint:ts:fix": "tslint --config tslint.json --fix --project . -e \"**/{test,polyfills}.ts\"",
+    "lint:tsc": "tsc --noEmit --skipLibCheck",
+    "init:env": "init-dev-env generate-dot-env example.env -f"
   },
   "prettier": {
     "printWidth": 90,
@@ -79,5 +86,12 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "importSort": {
+    ".ts, .tsx": {
+      "parser": "typescript",
+      "style": "module",
+      "options": {}
+    }
   }
 }
